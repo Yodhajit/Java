@@ -19,24 +19,48 @@
 //         }
 // }
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class Palindrome {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+// public class Palindrome {
+//     public static void main(String[] args) {
+//         Scanner in = new Scanner(System.in);
         
-        int num = in.nextInt();
-        int current = num, temp = 0;
+//         int num = in.nextInt();
+//         int current = num, temp = 0;
 
-        while (num > 0) {
-            int digit = num % 10;
-            temp = temp * 10 + digit;
-            num /= 10;
+//         while (num > 0) {
+//             int digit = num % 10;
+//             temp = temp * 10 + digit;
+//             num /= 10;
+//         }
+
+//         if (current == temp)
+//             System.out.println("Palindrome");
+//         else
+//             System.out.println("Not Palindrome");
+//     }
+// }
+// Leet code problem-
+class Solution {
+    public boolean isUgly(int n) {
+
+        if (n <= 0) {
+            return false;
         }
 
-        if (current == temp)
-            System.out.println("Palindrome");
-        else
-            System.out.println("Not Palindrome");
+        while (n % 2 == 0) {
+            n = n / 2;
+        }
+
+        while (n % 3 == 0) {
+            n = n / 3;
+        }
+
+        while (n % 5 == 0) {
+            n = n / 5;
+        }
+
+        return n == 1;
     }
 }
+
