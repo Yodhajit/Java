@@ -85,48 +85,67 @@
 // }
 //using functions
 
-class Solution {
-    public static boolean isArmstrong(int n) {
+// class Solution {
+//     public static boolean isArmstrong(int n) {
 
-        int original = n;
-        int count = 0;
-        int temp = n;
+//         int original = n;
+//         int count = 0;
+//         int temp = n;
 
-        // Step 1: count digits
-        while (temp > 0) {
-            count++;
-            temp = temp / 10;
-        }
+//         // Step 1: count digits
+//         while (temp > 0) {
+//             count++;
+//             temp = temp / 10;
+//         }
 
-        int sum = 0;
-        temp = n;
+//         int sum = 0;
+//         temp = n;
 
-        // Step 2: calculate sum of powers
-        while (temp > 0) {
-            int digit = temp % 10;
+//         // Step 2: calculate sum of powers
+//         while (temp > 0) {
+//             int digit = temp % 10;
 
-            int power = 1;
-            for (int i = 0; i < count; i++) {
-                power = power * digit;
-            }
+//             int power = 1;
+//             for (int i = 0; i < count; i++) {
+//                 power = power * digit;
+//             }
 
-            sum = sum + power;
-            temp = temp / 10;
-        }
+//             sum = sum + power;
+//             temp = temp / 10;
+//         }
 
-        return sum == original;
-    }
+//         return sum == original;
+//     }
 
+//     public static void main(String[] args) {
+//         int n = 153;
+
+//         if (isArmstrong(n)) {
+//             System.out.println("Armstrong Number");
+//         } else {
+//             System.out.println("Not Armstrong");
+//         }
+//     }
+// }
+
+//fibonacci series
+class Main {
     public static void main(String[] args) {
-        int n = 153;
 
-        if (isArmstrong(n)) {
-            System.out.println("Armstrong Number");
-        } else {
-            System.out.println("Not Armstrong");
+        int n = 10;  
+
+        int a = 0, b = 1;
+
+        System.out.print(a + " " + b + " ");
+
+        for (int i = 2; i < n; i++) {
+            int c = a + b;
+            System.out.print(c + " ");
+
+            a = b;
+            b = c;
         }
     }
 }
-
 
 
