@@ -148,30 +148,54 @@
 //     }
 // }
 //triangle pattern
-class Main {
-    public static void main(String[] args) {
+// class Main {
+//     public static void main(String[] args) {
 
-        int n = 5;
+//         int n = 5;
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
+//         for (int i = 1; i <= n; i++) {
+//             for (int j = 1; j <= i; j++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+// //inverted triangle pattern 
+// class Main {
+//     public static void main(String[] args) {
+
+//         int n = 5;
+
+//         for (int i = n; i >= 1; i--) {
+//             for (int j = 1; j <= i; j++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+//Leetcode;
+class Solution {
+    public boolean checkDivisibility(int n) {
+
+        int original = n;
+
+        int sum = 0;
+        int product = 1;
+
+        while (n > 0) {
+            int digit = n % 10;
+
+            sum = sum + digit;
+            product = product * digit;
+
+            n = n / 10;
         }
-    }
-}
-//inverted triangle pattern 
-class Main {
-    public static void main(String[] args) {
 
-        int n = 5;
+        int c = sum + product;
 
-        for (int i = n; i >= 1; i--) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+        return original % c == 0;
     }
 }
