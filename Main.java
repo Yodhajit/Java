@@ -204,15 +204,20 @@ class Main {
     public static void main(String[] args) {
 
         int n = 1234;
+
         int original = n;
-        int reverse = 0;
+        int reverse = 0;        
         while (n > 0) {
             int digit = n % 10;
             reverse = reverse * 10 + digit;
             n = n / 10;
         }
-
-        int distance = Math.abs(original - reverse);
+        int distance;
+        if (original > reverse) {
+            distance = original - reverse;
+        } else {
+            distance = reverse - original;
+        }
 
         System.out.println("Mirror (reverse): " + reverse);
         System.out.println("Mirror distance: " + distance);
