@@ -177,25 +177,44 @@
 // }
 
 //Leetcode;
-class Solution {
-    public boolean checkDivisibility(int n) {
+// class Solution {
+//     public boolean checkDivisibility(int n) {
 
+//         int original = n;
+
+//         int sum = 0;
+//         int product = 1;
+
+//         while (n > 0) {
+//             int digit = n % 10;
+
+//             sum = sum + digit;
+//             product = product * digit;
+
+//             n = n / 10;
+//         }
+
+//         int c = sum + product;
+
+//         return original % c == 0;
+//     }
+// }
+
+class Main {
+    public static void main(String[] args) {
+
+        int n = 1234;
         int original = n;
-
-        int sum = 0;
-        int product = 1;
-
+        int reverse = 0;
         while (n > 0) {
             int digit = n % 10;
-
-            sum = sum + digit;
-            product = product * digit;
-
+            reverse = reverse * 10 + digit;
             n = n / 10;
         }
 
-        int c = sum + product;
+        int distance = Math.abs(original - reverse);
 
-        return original % c == 0;
+        System.out.println("Mirror (reverse): " + reverse);
+        System.out.println("Mirror distance: " + distance);
     }
 }
