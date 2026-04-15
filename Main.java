@@ -226,22 +226,22 @@
 
 
 //Leetcode problem
-class Solution {
-    public int numberOfCuts(int n) {
-    if (n==1){
-        return 0;
-    }
+// class Solution {
+//     public int numberOfCuts(int n) {
+//     if (n==1){
+//         return 0;
+//     }
     
     
-    if (n%2==0) {
-        int x=n/2;
-        return x;
-    }   
-    if (n%2!=0){
-        int x = n;
-        return x;
+//     if (n%2==0) {
+//         int x=n/2;
+//         return x;
+//     }   
+//     if (n%2!=0){
+//         int x = n;
+//         return x;
     
-    }
-    return 0;
-    }
-}
+//     }
+//     return 0;
+//     }
+// }
