@@ -200,26 +200,48 @@
 //     }
 // }
 
-class Main {
-    public static void main(String[] args) {
+// class Main {
+//     public static void main(String[] args) {
 
-        int n = 1234;
+//         int n = 1234;
 
-        int original = n;
-        int reverse = 0;        
-        while (n > 0) {
-            int digit = n % 10;
-            reverse = reverse * 10 + digit;
-            n = n / 10;
-        }
-        int distance;
-        if (original > reverse) {
-            distance = original - reverse;
-        } else {
-            distance = reverse - original;
-        }
+//         int original = n;
+//         int reverse = 0;        
+//         while (n > 0) {
+//             int digit = n % 10;
+//             reverse = reverse * 10 + digit;
+//             n = n / 10;
+//         }
+//         int distance;
+//         if (original > reverse) {
+//             distance = original - reverse;
+//         } else {
+//             distance = reverse - original;
+//         }
 
-        System.out.println("Mirror (reverse): " + reverse);
-        System.out.println("Mirror distance: " + distance);
+//         System.out.println("Mirror (reverse): " + reverse);
+//         System.out.println("Mirror distance: " + distance);
+//     }
+// }
+
+
+//Leetcode problem
+class Solution {
+    public int numberOfCuts(int n) {
+    if (n==1){
+        return 0;
+    }
+    
+    
+    if (n%2==0) {
+        int x=n/2;
+        return x;
+    }   
+    if (n%2!=0){
+        int x = n;
+        return x;
+    
+    }
+    return 0;
     }
 }
