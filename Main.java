@@ -83,7 +83,7 @@
 //         System.out.println("Reversed number: " + reversed);
 //     }
 // }
-//using functions
+// using functions
 
 // class Solution {
 //     public static boolean isArmstrong(int n) {
