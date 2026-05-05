@@ -145,7 +145,7 @@
 //             a = b;
 //             b = c;
 //         }
-//     }
+//     } 
 // }
 //triangle pattern
 // class Main {
